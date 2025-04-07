@@ -1,15 +1,15 @@
 pipeline {
     agent any
     options {
-        skipDefaultCheckout()  // Skip the default SCM checkout
+        skipDefaultCheckout()
     }
 
     stages {
-            stage('Clean Workspace') {
-                steps {
-                    cleanWs()
-                }
+        stage('Clean Workspace') {
+            steps {
+                 cleanWs()
             }
+        }
         stage('Checkout') {
             steps {
                 git url: 'https://github.com/weronikaciezak/test.git',
@@ -26,9 +26,7 @@ pipeline {
 
 //         stage('Deploy') {
 //             steps {
-//                 // Shutdown any existing containers
 //                 sh 'docker-compose down'
-//                 // Bring up the containers in detached mode
 //                 sh 'docker-compose up -d'
 //             }
 //         }

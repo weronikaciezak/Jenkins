@@ -13,7 +13,9 @@ services:
       - jenkins
 
   jenkins:
-    image: jenkins/jenkins:lts
+    build:
+      context: ./jenkins
+      dockerfile: Dockerfile
     container_name: jenkins_test
     ports:
       - "8080:8080"

@@ -7,6 +7,7 @@ pipeline {
     stages {
             stage('Clean Workspace') {
                 steps {
+                    sh 'docker-compose --version'
                     cleanWs()  // Clean the workspace to ensure a fresh start
                 }
             }

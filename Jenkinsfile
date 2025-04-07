@@ -7,12 +7,11 @@ pipeline {
     stages {
             stage('Clean Workspace') {
                 steps {
-                    cleanWs()  // Clean the workspace to ensure a fresh start
+                    cleanWs()
                 }
             }
         stage('Checkout') {
             steps {
-                // Custom Git checkout with credentials
                 git url: 'https://github.com/weronikaciezak/test.git',
                     branch: 'main',
                     credentialsId: 'GitHub'
@@ -21,7 +20,6 @@ pipeline {
 
         stage('Build') {
             steps {
-                // Build Docker image
                 sh 'docker build -t licencjat:latest .'
             }
         }

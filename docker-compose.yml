@@ -25,6 +25,8 @@ services:
       - jenkins_home:/var/jenkins_home
     networks:
       - jenkins-net
+    environment:
+      - DOCKER_HOST=unix:///var/run/docker.sock
 
 volumes:
   jenkins_home:

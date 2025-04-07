@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-//                 sh 'docker build -t licencjat:latest .'
-                    sh 'docker --version'
+                sh 'docker build -t licencjat:latest .'
+//                     sh 'docker --version'
             }
         }
     }

@@ -5,6 +5,11 @@ pipeline {
     }
 
     stages {
+            stage('Clean Workspace') {
+                steps {
+                    cleanWs()  // Clean the workspace to ensure a fresh start
+                }
+            }
         stage('Checkout') {
             steps {
                 // Custom Git checkout with credentials

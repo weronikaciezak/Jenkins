@@ -4,7 +4,12 @@ pipeline {
 //         skipDefaultCheckout()
 //     }
 
-//     stages {
+    stages {
+            stage('kskjwbdk') {
+                    steps {
+                        sh 'docker --version'
+                    }
+                }
 //             stage('Checkout') {
 //                 steps {
 //                     git url: 'https://github.com/weronikaciezak/test.git',
@@ -23,6 +28,6 @@ pipeline {
 //                     sh 'docker-compose up -d'
 //                 }
 //             }
-//         }
-//     }
+        }
+    }
 }

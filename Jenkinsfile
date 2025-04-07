@@ -10,6 +10,7 @@ pipeline {
                         sh 'docker --version'
                     }
                 }
+            }
 //             stage('Checkout') {
 //                 steps {
 //                     git url: 'https://github.com/weronikaciezak/test.git',

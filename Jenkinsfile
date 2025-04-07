@@ -27,14 +27,14 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-            steps {
-                // Shutdown any existing containers
-                sh 'docker-compose down'
-                // Bring up the containers in detached mode
-                sh 'docker-compose up -d'
-            }
-        }
+//         stage('Deploy') {
+//             steps {
+//                 // Shutdown any existing containers
+//                 sh 'docker-compose down'
+//                 // Bring up the containers in detached mode
+//                 sh 'docker-compose up -d'
+//             }
+//         }
     }
 
     post {
